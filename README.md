@@ -1,4 +1,4 @@
-![AI 월간 밀크T cover](https://github.com/makeflower99/MonthlyAI/assets/156271091/e855cb42-5e04-4c11-9f8d-5d5b7a8106e1)
+![AI 월간 밀크T cover](https://github.com/wonjin-hwang/chunjae_Monthly_MKT/assets/156271091/d141b524-7484-43c0-8681-c9eef732cbb5)
 
 ![버전](https://img.shields.io/badge/version-1.0.0-blue)
 
@@ -29,12 +29,20 @@
 | 긴 글 | 4문단 | 5문제 | 5문제 | 5문제 |
 
 ## 📌설치 및 실행 방법
----
 **docker를 설치 완료 한 후 실행 해주세요.**
 **가상환경을 필수가 아니지만 권장합니다.**
->.env 수정
+>루트 폴더에 .env 생성
 ```bash
-GPT_API_KEY = "본인 openai api key"
+# .env 내용
+# API key
+GPT_API_KEY="your-api-key"
+
+# Database configuration
+DB_HOST="your-db-host"
+DB_PORT="your-db-port"
+DB_USER="your-db-user"
+DB_PASSWORD="your-db-password"
+DB_NAME="your-db-name"
 ```
 >가상환경 생성
 ```bash
@@ -44,7 +52,7 @@ python -m venv 가상환경이름
 ```bash
 activate.bat
 ```
->가상환경 실행 후 .env가 있는 폴더로 아동 후 cmd 혹은 powershell 창에 아래 코드 입력
+>가상환경 실행 후 .env가 있는 폴더로 이동 후 cmd 혹은 powershell 창에 아래 코드 입력
 ```bash
 docker-compose up --build
 ```
@@ -54,35 +62,35 @@ docker-compose up --build
 ```
 ## 📌실제 서비스 화면
 < 메인페이지 >
-![Screenshot 2024-06-17 205300](https://github.com/makeflower99/MonthlyAI/assets/156271091/25fdcade-532f-40ef-9f0c-bf9a81e09d86)
+![Screenshot 2024-06-17 205300](https://github.com/wonjin-hwang/chunjae_Monthly_MKT/assets/156271091/ef7d7b92-0377-45cb-8fc0-d4d0d54b97b6)
 
 < 난이도 선택 페이지 >
-![Screenshot 2024-06-17 205305](https://github.com/makeflower99/MonthlyAI/assets/156271091/b6c18665-b6be-4a80-84c6-4c8486f8c3a4)
+![Screenshot 2024-06-17 205305](https://github.com/wonjin-hwang/chunjae_Monthly_MKT/assets/156271091/f6380eb0-b6bb-425c-aa67-4ea4c130a1ac)
 
 < 문제페이지 >
-![Screenshot 2024-06-17 205322](https://github.com/makeflower99/MonthlyAI/assets/156271091/8bd733b3-d6fe-431f-a44f-991adef1765e)
+![Screenshot 2024-06-17 205322](https://github.com/wonjin-hwang/chunjae_Monthly_MKT/assets/156271091/1c718b2c-b050-4145-adc8-89bafeed6858)
 
 < 대시보드 >
-![Screenshot 2024-06-17 205641](https://github.com/makeflower99/MonthlyAI/assets/156271091/19b60a13-c147-48cb-a909-b01b469741d5)
+![Screenshot 2024-06-17 205641](https://github.com/wonjin-hwang/chunjae_Monthly_MKT/assets/156271091/fde17f86-34c0-4cb7-b219-b5232328f231)
 
 < 정답지 페이지 >
-![Screenshot 2024-06-17 205657](https://github.com/makeflower99/MonthlyAI/assets/156271091/ca62d3d0-c225-447c-a813-136990cdf868)
+![Screenshot 2024-06-17 205657](https://github.com/wonjin-hwang/chunjae_Monthly_MKT/assets/156271091/a670f747-67c6-4360-9966-fa5c3a7454e5)
 
 < 추천강좌 페이지 >
-![Screenshot 2024-06-17 205702](https://github.com/makeflower99/MonthlyAI/assets/156271091/35871e86-9b18-450e-ab82-bdda90420afc)
+![Screenshot 2024-06-17 205702](https://github.com/wonjin-hwang/chunjae_Monthly_MKT/assets/156271091/57c0582b-dad2-4109-87e4-cb33950b3bf9)
 
 < 생각넓히기 페이지 >
-![Screenshot 2024-06-17 205706](https://github.com/makeflower99/MonthlyAI/assets/156271091/f5de0351-c655-4249-9411-10d7d3044c1f)
+![Screenshot 2024-06-17 205706](https://github.com/wonjin-hwang/chunjae_Monthly_MKT/assets/156271091/a1a41f03-4329-4055-9b91-a527b2c49036)
 
 
 ## 📌아키텍처
-![Screenshot 2024-06-05 145847](https://github.com/makeflower99/MonthlyAI/assets/156271091/5bc1d391-5bb1-43bc-9412-132ab59474d2)
+![Screenshot 2024-06-05 145847](https://github.com/wonjin-hwang/chunjae_Monthly_MKT/assets/156271091/f550d426-2d43-40af-8bb0-0302382db15c)
 
 ## 📌ERD
-![Screenshot 2024-06-05 145910](https://github.com/makeflower99/MonthlyAI/assets/156271091/7ffc497d-fb88-4f4c-9f0b-be97f67fbb9e)
+![Screenshot 2024-06-05 145910](https://github.com/wonjin-hwang/chunjae_Monthly_MKT/assets/156271091/aaf384ea-a540-4ba4-bf7b-b44e3197d4aa)
 
 ## 📌라이브러리
-![Screenshot 2024-06-14 112723](https://github.com/makeflower99/MonthlyAI/assets/156271091/c4908c5b-8f7d-4da3-b783-cabb078b7b26)
+![Screenshot 2024-06-14 112723](https://github.com/wonjin-hwang/chunjae_Monthly_MKT/assets/156271091/e91f61c8-1491-4af9-931b-48565b4c8d8b)
 
 ## 📌구성원
 | 이름 | 역할 |
