@@ -30,6 +30,7 @@
 
 ## 📌설치 및 실행 방법
 **docker를 설치 완료 한 후 실행 해주세요.**
+**파일은 clone하지 말고 압축폴더 다운로드해서 실행해주세요.**
 **가상환경을 필수가 아니지만 권장합니다.**
 >루트 폴더에 .env 생성
 ```bash
@@ -43,6 +44,12 @@ DB_PORT="your-db-port"
 DB_USER="your-db-user"
 DB_PASSWORD="your-db-password"
 DB_NAME="your-db-name"
+```
+> 만약 3306 포트를 다른 데이터 베이스가 사용하고 있는 경우 : docker-compose 파일에서 sql 포트번호를 바꿔서 진행하세요
+```bash
+# 예시
+    ports:
+      - "3307:3306"
 ```
 >가상환경 생성
 ```bash
