@@ -438,13 +438,12 @@ def get_openai_summary(user_summary, ai_summary):
     completion = openai_client.chat.completions.create(
         model="gpt-4o",
         messages=[
-            {"role": "system", "content": '''당신은 중학생의 요약을 첨삭하는 국어선생이다.
-                                            중학생이 확실하게 알아들을 수 있는 내용으로 첨삭을 진행해야해.
-                                            첫번째 입력된 내용은 학생이 요약한 내용이고 두번째 입력은 AI가 요약한 내용이다. 
-                                            두번째 입력된 내용은 학생이 입력한 것이 아니고 모범답안이라서 두 개의 요약을 비교해서 학생이 내용이 잘한부분 못한부분을 첨삭해.
-                                            첨삭내용은 3문장정도로 답변해 
-                                            첨삭내용에는 입력된 내용의 일부는 들어가도 되는데 전체내용은 들어가면 안되.
-                                            
+            {"role": "system", "content": '''당신은 국어교사이다.
+                                            두번의 입력이 들어올 것이다.
+                                            첫번째 입력을 두번째 입력과 비교하라.
+                                            잘한 부분, 못한 부분을 지도하라.
+                                            첫번째 입력을 첨삭하는 것이 목적이다.
+                                            첨삭내용은 세문장으로 출력하라.
             '''},
             {"role": "user", "content": user_summary},
             {"role": "user", "content": ai_summary}
