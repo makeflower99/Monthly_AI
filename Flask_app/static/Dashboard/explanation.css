@@ -1,0 +1,119 @@
+body {
+    width: 100%;
+    height: 1080px;
+    background-color: #ffffff;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    overflow: hidden;
+}
+
+#header {
+    display: flex;
+    background-color: #733CB3;
+    width: 100%;
+    height: 15%;
+    justify-content: center;
+    text-align: center;
+    align-items: center;
+    position: fixed; /* 고정 설정 */
+    top: 0; /* 화면 상단에 고정 */
+    z-index: 1000; /* 다른 요소 위에 표시 */
+}
+
+#header h1 {
+    color: #E4DCF3;
+    font-family: 'Font 2', sans-serif;
+    font-size: 65px;
+}
+
+#main {
+    display: flex;
+    width: 100%;
+    height: 80%;
+    align-items: center; /* 가로정렬 */
+    flex-direction: column;
+    padding-top: 10%; /* 고정된 헤더에 대한 상단 마진 추가 문제와 상단 사이의 간격 */
+    padding-bottom: 10%;
+    flex: 1;
+    overflow-y: auto;
+    scrollbar-width: none;
+}
+
+.problem-explanation {
+    background: #E4DCF3;
+    width: 60%;
+    height: 100%;
+    margin: 20px 0;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 0 10px #00000050;
+    position: relative; /* 이미지 배치를 위한 설정 */
+}
+
+.problem-explanation h2 {
+    margin-top: 0;
+    font-family: 'Font 2', sans-serif;
+    font-size: 30px;
+}
+
+.problem-explanation h3 {
+    margin-top: 0;
+    font-family: 'Font 2', sans-serif;
+    font-size: 20px;
+}
+
+.question p {
+    margin-top: 0;
+    font-family: 'Font 1', sans-serif;
+    font-size: 18px;
+}
+
+.explanation {
+    margin-top: 0;
+    font-family: 'Font 1', sans-serif;
+    font-size: 16px;
+}
+
+#footer {
+    display: flex;
+    text-align: center;
+    background-color: #733CB3;
+    position: fixed;
+    width: 100%;
+    height: 10%;
+    padding: 0% 3% 0% 3%;
+    bottom: 0;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+#footer button{
+    font-family: 'Font 1', sans-serif;
+    font-size: 15px;
+    color: #ffffff;
+    border: none;
+    border-radius: 14px;
+    background-color: #A685D4;
+    padding: 10px;
+    margin-top: 2%;
+}
+
+#footer p{
+    font-family: 'Font 2', sans-serif;
+    font-size: 20px;
+    color: #ffffff;
+}
+
+@font-face {
+    font-family: 'Font 1';
+    src: url('../fonts/Pretendard-Medium.woff') format('woff'),
+         url('../fonts/Pretendard-Medium.ttf') format('truetype');
+}
+@font-face {
+    font-family: 'Font 2';
+    src: url('../fonts/HU네모굴림170.woff') format('woff'),
+         url('../fonts/HU네모굴림170.ttf') format('truetype');
+}

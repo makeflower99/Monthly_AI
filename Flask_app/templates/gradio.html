@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gradio Interface</title>
+    <link rel="stylesheet" href="/static/gradio_style.css">
+</head>
+<body>
+    <h1>중등신문기사 생성기</h1>
+    <div class="container">
+        <div class="column">
+            <h3>기사 및 문제 생성</h3>
+            <button id="generate_article">기사 생성(약 30초 정도 걸려요. 기다려주세요.)</button>
+            <textarea id="article_output" readonly></textarea>
+            <button id="save_csv">CSV 파일 저장</button> <!-- CSV 저장 버튼 추가 -->
+        </div>
+    </div>
+    <script src="/static/gradio_script.js"></script>
+</body>
+</html>

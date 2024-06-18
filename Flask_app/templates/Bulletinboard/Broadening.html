@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>생각 넓히기 페이지</title>
+    <link rel="stylesheet" href="/static/Bulletinboard/Broadening.css">
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>기후변화로 비롯된 손실과 피해... 누가, 어떻게 책임지나</h1>
+            <button onclick="reReadArticle()">기사 다시보기</button>
+        </header>
+        <main>
+            <section class="expression">
+                <h2>1. 기사문 그림으로 표현하기</h2>
+                <div class="drawing-area">그림이 비어있어요!</div>
+                <button onclick="participate()">참여하기</button>
+            </section>
+            <section class="comments">
+                <h2>2. 나의 생각 댓글하기</h2>
+                <textarea placeholder="글을 작성해 주세요!"></textarea>
+                <button onclick="participate()">참여하기</button>
+            </section>
+        </main>
+        <footer>
+            <div id = "footer-text">
+                <p>이 기사문에 대한 다양한 생각을 정리해 보자! 내 생각을 많은 그림이나 글로 친구들과 공유할 수 있어요!</p>
+            </div>
+            <button onclick="viewOnly()">나만 볼래요</button>
+            <button onclick="share()">친구들과 공유 할래요!</button>
+        </footer>
+    </div>
+</body>
+<script src="/static/Bulletinboard/Broadening.js"></script>
+</html>

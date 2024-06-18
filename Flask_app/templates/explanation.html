@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>문제 정답지</title>
+    <meta name="article_code" content="{{ article_code }}">
+    <link rel="stylesheet" href="{{ url_for('static', filename='Dashboard/explanation.css') }}">
+</head>
+<body>
+    <div id="header">
+        <h1>문제 정답지</h1>
+    </div>
+    <div id="main">
+        {% for question in questions %}
+        <section class="problem-explanation">
+            <h2>문제 {{ loop.index }}</h2>
+            <div class="question">
+                <p>{{ question.question }}</p>
+                <ul>
+                    {% for option in question.options %}
+                    <li>{{ option }}</li>
+                    {% endfor %}
+                </ul>
+            </div>
+            <h3>정답</h3>
+            <div class="explanation">
+                <p>{{ question.answer }}</p>
+            </div>
+        </section>
+        {% endfor %}
+    </div>
+    <div id="footer">
+        <button onclick="goBack()">대시보드로 돌아가기</button>
+        <p>© 2024 문제 해설지</p>
+    </div>
+
+    <script src="{{ url_for('static', filename='Dashboard/explanation.js') }}"></script>
+</body>
+</html>

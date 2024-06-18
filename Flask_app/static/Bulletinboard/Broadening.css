@@ -1,0 +1,143 @@
+body {
+    width: 100%;
+    height: 1080px;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.container {
+    width: 85%;
+    height: 75%;
+    margin: auto;
+    padding: 20px;
+    background-color: #DFD0EF;
+    border-radius: 25px;
+}
+
+header {
+    margin: 10px 0;
+    width: 100%;
+}
+
+header h1 {
+    font-family: 'Font 2', sans-serif;
+    font-size: 44px;
+    color: #733CB3;
+    margin: 38px;
+}
+
+header button {
+    background-color: #A685D4;
+    color: #ffffff;
+    border-radius: 11px;
+    border: none;
+    padding: 10px 10px;
+    margin: 0 2.5%;
+    font-family: 'Font 1', sans-serif;
+    font-size: 15px;
+    cursor: pointer;
+}
+
+main {
+    display: flex;
+    justify-content: center;
+    width: 100%;
+    height: 67%;
+}
+
+main button {
+    background-color: #733CB3;
+    color: #ffffff;
+    border: none;
+    padding: 10px 15px;
+    cursor: pointer;
+    font-size: 15px;
+    border-radius: 11px;
+    font-family: 'Font 1', sans-serif;
+}
+
+section {
+    width: 45%;
+    height: 90%;
+    margin: 1% 2.5%;
+}
+
+section h2{
+    font-family: 'Font 2', sans-serif;
+    font-size: 30px;
+    color: #733CB3;
+    margin: 4% 0;
+}
+
+.drawing-area {
+    width: 100%;
+    height: 82%;
+    border: 1px solid #ccc;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: #ffffff;
+    margin-bottom: 10px;
+    font-family: 'Font 1', sans-serif;
+}
+
+textarea {
+    width: 100%;
+    height: 78%;
+    border: 1px solid #ccc;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: #ffffff;
+    margin-bottom: 10px;
+    padding: 10px;
+    font-family: 'Font 1', sans-serif;
+}
+
+footer {
+    width: 100%;
+    height: auto;
+    margin: 2% 0;
+    padding: 1% 0;
+    display: flex;
+    flex-direction: row;
+    align-items: center; /* 세로 가운데 정렬 */
+}
+
+#footer-text {
+    width: 78.5%;
+    margin-left: 2.5%;
+}
+
+#footer-text p {
+    font-family: 'Font 1', sans-serif;
+    font-size: 20px;
+    color: #733CB3;
+    margin: 0;
+}
+
+footer button {
+    background-color: #ffc107;
+    color: #000000;
+    border: none;
+    padding: 10px 15px;
+    cursor: pointer;
+    font-size: 15px;
+    border-radius: 11px;
+    font-family: 'Font 1', sans-serif;
+    margin-left: 16px;
+}
+
+@font-face {
+    font-family: 'Font 1';
+    src: url('../fonts/Pretendard-Medium.woff') format('woff'),
+         url('../fonts/Pretendard-Medium.ttf') format('truetype');
+}
+@font-face {
+    font-family: 'Font 2';
+    src: url('../fonts/HU네모굴림170.woff') format('woff'),
+         url('../fonts/HU네모굴림170.ttf') format('truetype');
+}

@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>난이도 선택</title>
+    <link rel="stylesheet" href="/static/difficulty/difficulty.css"> <!-- CSS 파일 경로 수정 -->
+</head>
+<body>
+    <div id="top_bar">
+        <div id="sub-title">
+            <h1>난 이 도  선 택</h1>
+        </div>
+    </div>
+    <div id="select-level">
+        <div id="white-box">
+            <div id="level-buttons">
+                <div class="button-container">
+                    <button id="shortButton">짧은글</button>
+                    <h1>입문</h1>
+                    <p>2문단 분량</p>
+                    <p>객관식 9문제</p>
+                    <p>서술형 1문제</p>
+                </div>
+                <div class="button-container">
+                    <button id="mediumButton">중간글</button>
+                    <h1>기본</h1>
+                    <p>3문단 분량</p>
+                    <p>객관식 12문제</p>
+                    <p>서술형 1문제</p>
+                </div>
+                <div class="button-container">
+                    <button id="longButton">긴 글</button>
+                    <h1>발전</h1>
+                    <p>4문단 분량</p>
+                    <p>객관식 15문제</p>
+                    <p>서술형 1문제</p>
+                </div>
+            </div>
+            <div id="real-time">
+                <div id="real-time-describe">
+                    <p id="desc1">
+                        AI가 실시간으로 만든 기사와 문제를 풀어볼 수도 있습니다.
+                    </p>
+                    <p id="desc2">
+                        기사와 문제 생성 소요시간 : 최대 2분
+                    </p>
+                </div>
+                <div id="real-time-buttons">
+                    <button id="shortRealButton">짧은글</button>
+                    <button id="midRealButton">중간글</button>
+                    <button id="longRealButton">긴 글</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- 로딩창 추가 -->
+    <div id="loading" style="display: none;">
+        <div class="spinner"></div>
+        <p>로딩 중입니다. 잠시만 기다려 주세요...</p>
+    </div>
+
+    <script src="/static/difficulty/difficulty.js"></script>
+</body>
+</html>

@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>User Dashboard</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='Dashboard/dashboard.css') }}">
+</head>
+<body>
+    <div id="title">
+        <div id="title-letter">
+            <p>AI 분석 결과</p>
+        </div>
+    </div>
+    
+    <div id="grade">
+        <div id="pic">
+            <img src="/static/realgeni.png" alt="realgeni Image">
+        </div>
+
+        <div id="explain-grade">
+            <h1><span id="user_id"></span>이(가) 맞춘 갯수는 <span id="total_score"> </span>개에요</h1>
+            <p id="keyword_comment"></p>
+            <p id="voca_comment"></p>
+            <p id="para_comment"></p>
+        </div>
+
+        <div id="pyramid-container">
+            <div class="pyramid-chart">
+                <div class="pyramid-level" style="--level: 5;">노력을 더 많이 해볼까요?</div>
+                <div class="pyramid-level" style="--level: 4;">노력을 조금 해볼까요?</div>
+                <div class="pyramid-level" style="--level: 3;">보통이에요</div>
+                <div class="pyramid-level" style="--level: 2;">잘했어요</div>
+                <div class="pyramid-level" style="--level: 1;">참 잘했어요</div>
+            </div>
+        </div>
+    </div>
+
+    <div id="grade_sub">
+        <div id="spider-map">
+            <canvas id="spiderChart"></canvas>
+        </div>
+        <div id="user-summary">
+            <div id="summary">
+                <p id="summary-text"></p>
+            </div>
+            <div id="next">
+                <button id="open-explanation" onclick="openExplanation()">정답지</button>
+                <button id="open-relecture" onclick="openReLecture()">추천강좌</button>
+            </div>
+        </div>
+    </div>
+
+    <div id="popup" class="hidden">
+        <div id="popup-content">
+            <p>생각 넓히기에서 나의 생각을 공유하고 다른 친구들의 생각도 들어볼 수 있어요! 함께 들어가볼까요?</p>
+        </div>
+        <div id="popup-buttons">
+            <button id="yes-button">지금 할게요 !</button>
+            <button id="no-button">다음에 할게요</button>
+        </div>
+    </div>
+
+    <!-- JSON 데이터를 HTML로 전달하기 위한 스크립트 -->
+    <script type="application/json" id="userLevelData">{{ user_level | tojson | safe }}</script>
+    <script type="application/json" id="scoresData">{{ scores | tojson | safe }}</script>
+    <script type="application/json" id="summaryTextData">{{ summary_text | tojson | safe }}</script>
+    <script type="application/json" id="articleCodeData">{{ article_code | tojson | safe }}</script>
+    <script type="application/json" id="articleContentData">{{ article_content | tojson | safe }}</script> <!-- 추가된 부분 -->
+
+    <!-- 강의 데이터를 위한 스크립트 태그 -->
+    <script type="application/json" id="lecture-data">[{"강좌명": "강좌1", "과목": "국어", "강사": "강사1", "태그": "개념어,어휘력"}, {"강좌명": "강좌2", "과목": "수학", "강사": "강사2", "태그": "독서 기초"}]</script> <!-- 예시 데이터 -->
+</body>
+<script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+<script src="{{ url_for('static', filename='Dashboard/dashboard.js') }}"></script>
+</html>

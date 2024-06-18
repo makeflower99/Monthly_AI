@@ -1,0 +1,68 @@
+body {
+    width: 100%;
+    height: 1080px;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    overflow: hidden;
+}
+.recommendation {
+    width: 80%;
+    margin: auto;
+    padding: 20px;
+    background: #DFD0EF;
+    border-radius: 10px;
+    text-align: center;
+}
+
+h1 {
+    color: #733CB3;
+    font-family: 'Font 2', sans-serif;
+    font-size: 65px;
+}
+
+#lecture-list {
+    margin-top: 20px;
+    color: #733CB3;
+    
+}
+
+.lecture {
+    padding: 10px;
+    margin: 10px 0;
+    border: 2px solid #ffffff;
+    border-radius: 8px;
+    color: #370174;
+    font-family: 'Font 2', sans-serif;
+}
+
+.lecture h2{
+    font-size: 35px;
+}
+
+.lecture p{
+    font-size: 25px;
+}
+
+button {
+    margin-top: 20px;
+    padding: 10px 20px;
+    background: #733CB3;
+    color: #ffffff;
+    border: none;
+    border-radius: 15px;
+    cursor: pointer;
+    font-family: 'Font 1', sans-serif;
+    font-size: 15px;
+}
+
+@font-face {
+    font-family: 'Font 1';
+    src: url('../fonts/Pretendard-Medium.woff') format('woff'),
+         url('../fonts/Pretendard-Medium.ttf') format('truetype');
+}
+@font-face {
+    font-family: 'Font 2';
+    src: url('../fonts/HU네모굴림170.woff') format('woff'),
+         url('../fonts/HU네모굴림170.ttf') format('truetype');
+} 

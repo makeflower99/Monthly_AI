@@ -1,0 +1,70 @@
+version: '3.8'
+
+services:
+  mysql:
+    image: mysql:8.0
+    container_name: mysql_container
+    environment:
+      MYSQL_ROOT_PASSWORD: ${DB_PASSWORD}
+      MYSQL_DATABASE: ${DB_NAME}
+      MYSQL_USER: ${DB_USER}
+      MYSQL_PASSWORD: ${DB_PASSWORD}
+      MYSQL_ROOT_HOST: '%'
+    ports:
+      - "3306:3306"
+    volumes:
+      - mysql_data:/var/lib/mysql
+    healthcheck:
+      test: ["CMD", "mysqladmin", "ping", "-h", "localhost"]
+      interval: 10s
+      timeout: 5s
+      retries: 5
+      start_period: 30s
+
+  fastapi_app:
+    build:
+      context: ./Fastapi_app
+    container_name: fastapi_app
+    command: ["/bin/sh", "-c", "/wait-for-it.sh mysql:3306 --timeout=600 --strict -- uvicorn main:app --host 0.0.0.0 --port 8000 & python /app/generate_article_job.py"]
+    environment:
+      DB_HOST: ${DB_HOST}
+      DB_PORT: ${DB_PORT}
+      DB_USER: ${DB_USER}
+      DB_PASSWORD: ${DB_PASSWORD}
+      DB_NAME: ${DB_NAME}
+      PYTHONPATH: /app:/app/DB_app  # PYTHONPATH 설정 추가
+      GPT_API_KEY: ${GPT_API_KEY}
+    depends_on:
+      mysql:
+        condition: service_healthy
+    ports:
+      - "8000:8000"
+    volumes:
+      - ./Fastapi_app:/app
+      - ./DB_app:/app/DB_app  # DB_app 디렉토리 마운트 추가
+      - ./Flask_app/data:/app/data  # 데이터 디렉토리 마운트 추가
+      - ./generate_article_job.py:/app/generate_article_job.py  # 배치 작업 스크립트 추가
+
+  flask_app:
+    build:
+      context: ./Flask_app
+    container_name: flask_app
+    environment:
+      DB_HOST: ${DB_HOST}
+      DB_PORT: ${DB_PORT}
+      DB_USER: ${DB_USER}
+      DB_PASSWORD: ${DB_PASSWORD}
+      DB_NAME: ${DB_NAME}
+    depends_on:
+      mysql:
+        condition: service_healthy
+      fastapi_app:
+        condition: service_started
+    ports:
+      - "5000:5000"
+    volumes:
+      - ./Flask_app:/app
+      - ./Flask_app/data:/app/data  # 데이터 디렉토리 마운트 추가
+
+volumes:
+  mysql_data:

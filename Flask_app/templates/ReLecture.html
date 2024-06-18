@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Recommended Lectures</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='Dashboard/ReLecture.css') }}">
+</head>
+<body>
+    <div class="recommendation">
+        <h1>추천 강좌</h1>
+        <div id="lecture-list">
+            <!-- Lectures will be loaded here -->
+        </div>
+        <button onclick="goBack()">대시보드로 돌아가기</button>
+    </div>
+</body>
+<script id="lecture-data" type="application/json">
+    {{ lecture_json | safe }}
+</script>
+<script src="{{ url_for('static', filename='Dashboard/ReLecture.js') }}"></script>
+</html>

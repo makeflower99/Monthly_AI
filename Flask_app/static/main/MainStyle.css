@@ -1,0 +1,103 @@
+/* body 요소에 대한 스타일링 */
+body {
+    background-image: url('/static/main/newsroom.jpeg'); /* 배경 이미지 설정 */
+    background-size: cover; /* 배경 이미지를 전체 크기에 맞춤 */
+    background-position: center; /* 배경 이미지를 중앙에 위치시킴 */
+    background-repeat: no-repeat; /* 배경 이미지 반복 안 함 */
+    height: 100vh; /* 뷰포트 높이를 100%로 설정 */
+    margin: 0;
+    padding: 0;
+    overflow: hidden; /* 스크롤바 제거 */
+    display: flex; /* Flexbox 레이아웃 사용 */
+    align-items: center; /* 세로 방향으로 중앙 정렬 */
+    flex-direction: column; /* 플렉스 항목을 세로 방향으로 배치 */
+    justify-content: center; /* 가로 방향으로 중앙 정렬 */
+}
+
+#title {
+    width: 35%; /* 너비 */
+    height: 12%; /* 높이 */
+    padding: 1%; /* 안쪽 여백 */
+    margin: 1%; /* 바깥 여백 */
+    background-color: #63349A; /* 배경색 설정 */
+    border-radius: 35px; /* 모든 모서리를 둥글게 */
+    text-align: center; /* 텍스트 가운데 정렬 */
+    align-items: center; /* 내부 요소를 수직 중앙 정렬 */
+    justify-content: center; /* 내부 요소를 수평 중앙 정렬 */
+    display: flex; /* 내부 요소들을 정렬하기 위해 Flexbox 사용 */
+}
+
+#title h1 {
+    font-family: 'Font 2', sans-serif;
+    color: #E4DCF3;
+    font-size: 65px;
+}
+
+#sub-title {
+    width: 20%;
+    height: 5%;
+    padding: 1%;
+    margin: 1%;
+    background-color: #733CB3;
+    border-radius: 35px;
+    text-align: center; /* 텍스트 가운데 정렬 */
+    align-items: center; /* 내부 요소를 수직 중앙 정렬 */
+    justify-content: center; /* 내부 요소를 수평 중앙 정렬 */
+    display: flex;
+}
+
+#sub-title h2 {
+    font-family: 'Font 2', sans-serif;
+    color: #E4DCF3;
+    font-size: 32px;
+}
+
+#intro {
+    width: 31%;
+    height: 23%;
+    padding: 3%;
+    margin: 1%;
+    background-color: #ffffff;
+    border-radius: 35px;
+    text-align: center;
+    align-items: center;
+    flex-direction: column; /* 수직 방향으로 요소 배치 */
+}
+
+#intro h3 {
+    font-family: 'Font 1', sans-serif;
+    color: #000000;
+    font-size: 25px;
+    margin: 4%;
+}
+
+.con {
+    font-family: 'Font 1', sans-serif;
+    color: #000000;
+    font-size: 18px;
+    margin: 3%;
+}
+
+button {
+    font-family: 'Font 2', sans-serif;
+    background-color: #A685D4;
+    color: #ffffff;
+    font-size: 20px; 
+    padding: 10px 20px;
+    border-radius: 25px;
+    border: none;
+    cursor: pointer;
+    margin-top: 20px;
+    transition: background-color 0.3s;
+}
+
+@font-face {
+    font-family: 'Font 1';
+    src: url('../fonts/Pretendard-Medium.woff') format('woff'),
+         url('../fonts/Pretendard-Medium.ttf') format('truetype');
+}
+@font-face {
+    font-family: 'Font 2';
+    src: url('../fonts/HU네모굴림170.woff') format('woff'),
+         url('../fonts/HU네모굴림170.ttf') format('truetype');
+} 
