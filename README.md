@@ -84,7 +84,7 @@ docker-compose up --build
 
 
 ## 📌아키텍처
-![아키텍처 (6)](https://github.com/wonjin-hwang/chunjae_Monthly_MKT/assets/71313259/68ae8d2b-dcbe-46c0-9ea8-b1af8a44a563)
+![아키텍처 (5)](https://github.com/wonjin-hwang/chunjae_Monthly_MKT/assets/71313259/73fe08b5-9913-4a79-a339-e32e6320fdcb)
 
 ## 📌ERD
 ![Screenshot 2024-06-05 145910](https://github.com/wonjin-hwang/chunjae_Monthly_MKT/assets/156271091/aaf384ea-a540-4ba4-bf7b-b44e3197d4aa)
